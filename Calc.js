@@ -7,7 +7,7 @@ var result = document.getElementById('result');
 
 botonNumeros.forEach(function(boton){
     boton.addEventListener('click', function(){
-        agregarNumero(boton.innerText);      
+        agregarNumero(boton);      
     })
 });
 
@@ -28,3 +28,7 @@ botonDelete.addEventListener('click', function(){
     clear();
     actualizardiaplay();
 });
+function agregarNumero(boton)
+{
+    console.log(boton.innerText);
+}   
