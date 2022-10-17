@@ -2,7 +2,10 @@ const botonNumeros = document.getElementsByName('data-number');
 const botonOpera = document.getElementsByName('data-opera');
 const botonIgual = document.getElementsByName('data-igual') [0];
 const botonDelete = document.getElementsByName('data-delete') [0];
-var result = document.getElementById('result');
+const input = document.getElementById('result');
+let operator;
+
+
 
 
 botonNumeros.forEach(function(boton){
@@ -14,7 +17,8 @@ botonNumeros.forEach(function(boton){
 
 botonOpera.forEach(function(boton){
     boton.addEventListener('click', function(){
-        selectOperacion(boton.innerText);
+        operator = boton.innerText;
+        input.value += boton.innerText;
     })
 });
 
@@ -30,5 +34,5 @@ botonDelete.addEventListener('click', function(){
 });
 function agregarNumero(boton)
 {
-
+    input.value += boton.innerText;
 }   
