@@ -30,5 +30,5 @@ botonDelete.addEventListener('click', function(){
 });
 function agregarNumero(boton)
 {
-    console.log(boton.innerText);
+
 }   
